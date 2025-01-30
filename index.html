@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Support USA - Computer Troubleshooting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles for animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <a href="#" class="flex items-center py-4 px-2">
+            <span class="font-semibold text-gray-500 text-lg">Tech Support USA</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+          <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Services</a>
+          <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-green-500 text-white py-20">
+    <div class="container mx-auto text-center fade-in">
+      <h1 class="text-5xl font-bold mb-4">Professional Tech Support in the USA</h1>
+      <p class="text-xl mb-8">Fast, reliable, and affordable computer troubleshooting services for homes and businesses.</p>
+      <a href="#" class="bg-white text-blue-500 py-2 px-6 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get Help Now</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Computer Repair</h3>
+            <p class="text-gray-700">
+              We diagnose and fix hardware and software issues for desktops, laptops, and peripherals. From slow performance to hardware failures, we’ve got you covered.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Virus Removal</h3>
+            <p class="text-gray-700">
+              Protect your data and privacy with our expert virus and malware removal services. We ensure your system is clean and secure.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Data Recovery</h3>
+            <p class="text-gray-700">
+              Lost important files? We specialize in recovering data from damaged or corrupted drives, ensuring you never lose critical information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Why Choose Us?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Reason 1 -->
+        <div class="text-center fade-in">
+          <h3 class="text-xl font-bold mb-2">Certified Technicians</h3>
+          <p class="text-gray-300">Our team consists of certified professionals with years of experience in the tech industry.</p>
+        </div>
+        <!-- Reason 2 -->
+        <div class="text-center fade-in">
+          <h3 class="text-xl font-bold mb-2">Affordable Pricing</h3>
+          <p class="text-gray-300">We offer competitive pricing without compromising on quality or service.</p>
+        </div>
+        <!-- Reason 3 -->
+        <div class="text-center fade-in">
+          <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+          <p class="text-gray-300">We’re available round the clock to assist you with any tech emergencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Tech Support USA. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-400 hover:text-white mx-2 transition duration-300">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-2 transition duration-300">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add interactivity
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add fade-in animation to elements with the .fade-in class
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, index * 200); // Staggered animation
+      });
+
+      // Alert on Get Help Now button click
+      const helpButton = document.querySelector('.bg-white');
+      helpButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Our team will contact you shortly!');
+      });
+    });
+  </script>
+</body>
+</html>
